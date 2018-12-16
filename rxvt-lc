@@ -1,1 +1,13 @@
-/usr/bin/rxvt-lc
+#!/bin/sh
+
+DARKGRAY="#363636"
+RXVT=`which rxvt` || \
+   RXVT=`which urxvt`
+
+${RXVT} +sb -bg "${DARKGRAY}" -fg "#B8B8B8" \
+-color0 "${DARKGRAY}" -color1 "#B86565" -color2 "#65B865" \
+-color3 "#65B8B8" -color4 "#6565B8" -color5 "#B865B8" \
+-color6 "#B8B865" -color7 "#B8B8B8" -color8 "#6F6F6F" \
+-color9 "#B86F6F" -color10 "#6FB86F" -color11 "#6FB8B8" \
+-color12 "#6F6FB8" -color13 "#B86FB8" -color14 "#B8B86F" \
+-color15 "#B8B8B8" -sl 8192 $@
